@@ -21,4 +21,4 @@ This project is designed for Python 3.11.x, which is compatible with current Fas
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
-
+uvicorn app.main:app --host 0.0.0.0 --port "${{PORT:-8000}}"
