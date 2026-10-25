@@ -6,10 +6,10 @@ from app.config import get_settings
 settings = get_settings()
 
 app = FastAPI(
-    title=settings.app_name,
+        title=settings.app_name,
         version=settings.app_version,
-            description="Varul backend foundation service.",
-            )
+        description="Varul backend foundation service.",
+      )
 
 app.include_router(health_router, prefix=settings.api_prefix)
 
