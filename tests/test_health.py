@@ -15,4 +15,4 @@ def test_health_endpoint() -> None:
     assert response.status_code == 200
     payload = response.json()
     
-    assert payload["service"] == "Varul Backend"
+    assert payload["service"] == "varulbackend"
