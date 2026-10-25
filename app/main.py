@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from app.api.health import router as health_router
 from app.config import get_settings
+from app.api.ai import router as ai_router
 
 settings = get_settings()
 
@@ -12,6 +13,7 @@ app = FastAPI(
       )
 
 app.include_router(health_router, prefix=settings.api_prefix)
+app.include_router(ai_router, prefix=settings.api_prefix)
 
 
 @app.get("/")
